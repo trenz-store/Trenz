@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRENZ Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+    body {
+      background: #fff;
+      color: #333;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: #111;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      font-size: 28px;
+      letter-spacing: 2px;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ff3b3f;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1606813903343-74f7f8b07d6a?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 48px;
+      background: rgba(0,0,0,0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 50px;
+    }
+    .product-card {
+      border: 1px solid #eee;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .product-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .product-card .info {
+      padding: 15px;
+    }
+    .product-card .info h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+    .product-card .info p {
+      color: #555;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .product-card .info .price {
+      font-weight: bold;
+      color: #ff3b3f;
+    }
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    footer p {
+      margin-bottom: 5px;
+    }
+    @media(max-width: 768px){
+      header {
+        flex-direction: column;
+      }
+      nav {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>TRENZ</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h2>Step Up Your Style with TRENZ</h2>
+  </section>
+
+  <section class="products" id="products">
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1618354699314-04f0c2ef8498?auto=format&fit=crop&w=800&q=80" alt="Sneakers">
+      <div class="info">
+        <h3>Air Max Sneakers</h3>
+        <p>Stylish and comfortable sneakers for all occasions.</p>
+        <p class="price">$120</p>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1618354699321-b869c52c1234?auto=format&fit=crop&w=800&q=80" alt="Hoodie">
+      <div class="info">
+        <h3>Hooded Sweatshirt</h3>
+        <p>Keep warm with our premium quality hoodie.</p>
+        <p class="price">$60</p>
+      </div>
+    </div>
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1618354699315-d1c0f44f6222?auto=format&fit=crop&w=800&q=80" alt="Track Pants">
+      <div class="info">
+        <h3>Track Pants</h3>
+        <p>Perfect blend of comfort and style for sports and leisure.</p>
+        <p class="price">$45</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>&copy; 2025 TRENZ. All Rights Reserved.</p>
+    <p>Contact: info@trenzstore.com</p>
+  </footer>
+</body>
+</html>
